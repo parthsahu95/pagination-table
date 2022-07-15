@@ -17,9 +17,7 @@ function App() {
     const response = await axios.get(
       "https://jsonplaceholder.typicode.com/todos"
     );
-    await setTimeout(() => {
-      setData(response.data);
-    }, 2000);
+    await setData(response.data);
     setUserFilter("");
     setRowsPerPage(10);
     setCurrentPage(1);
